@@ -1,0 +1,153 @@
+body {
+	margin:0;
+	font-family: "Montserrat", sans-serif;
+}
+
+.main {
+	width: 1140px;
+	margin: auto;
+	padding:0 30px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.header {
+	padding:15px 0;
+	border-bottom: 1px solid black;
+}
+
+.header-content{
+	width: 1140px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-content__logo {
+	font-weight: 600;
+	font-size:35px;
+	line-height: 50px;
+}
+
+.header-content__account{
+	text-align: center;
+}
+
+.header-content__account-name{
+	font-size:20px;
+}
+
+.header-content__account-exit{
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.header-content__account-exit:hover{
+    border-bottom: 1px solid black;
+}
+
+.users {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+.users tr {
+	height: 30px;
+}
+
+.users td {
+	border-top:1px solid black;
+}
+
+.add-user{
+	cursor:pointer;
+	position: fixed;
+	bottom: 50px;
+	right: 100px;
+}
+
+.form-inputs{
+	margin-bottom: 25px;
+}
+
+.dialog-form{
+	margin-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.close i{
+	cursor: pointer;
+}
+
+.close{
+	text-align: right;
+	padding-top: 5px;
+	padding-right: 10px;  
+}
+
+.add-user-dialog{
+	background-color: #FFFFFF;
+	display: none;
+	text-align: center;
+  	border: 1px solid black;
+  	border-radius: 10px;
+	width:275px;
+	height: 225px;
+	position: fixed;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.button{
+	height: 40px;
+	background-color: black;
+	color: white;
+	border: 1px solid black;
+	font-family: "Montserrat", sans-serif;
+	cursor: pointer;
+}
+
+.delete{
+	cursor: pointer;
+}
+
+.backgrnd-visible{
+	position: fixed;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.5);
+}
+.dialog-visible{
+	display:block;
+}
+
+.form-inputs__input-div {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.form-inputs__input {
+	margin-left: 16px;
+	height: 25px;
+}
+
+.form-inputs__dropdown{
+	width: 164.8px;
+	font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color:black;
+}

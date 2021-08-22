@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babylon</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1eab781526.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="header-content__logo">
+                <a href="#">Babylon</a>
+            </div>
+            <div class="header-content__account">
+                <div id="user_login" class="header-content__account-name"></div>
+                <div id="exit" class="header-content__account-exit">
+                    Выход
+                </div>
+            </div>
+        </div>      
+    </header>
+    <main id="main" class="main">
+        <div class="main__search-form">
+            <input id="search-form" type="search" class="main__search-form-input" placeholder=" "></input>
+            <label class="main__search-form-label">Поиск документа</label>
+            <a href="#" class="main__search-form-btn">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+        <div class="main__value">
+            <div id="search-status" class="search-status">Ничего не найдено</div>
+            <table class="table search-files" id="search_table">
+                <tbody id="search_table_results">
+                <tr>
+                    <th>Имя</th>
+                    <th>Название</th>
+                    
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="show-button" class="show-button"></div>
+        <table id="user-files" class="table show-files">
+            <tbody id="user-files__tbody">
+                <tr>
+                    <th>Имя</th>
+                    <th>Название</th>
+                </tr>
+            </tbody>
+        </table>
+        <div id="upload-form"></div>
+        <div id="show-file" class="dialog"></div>
+    </main>
+    <style id="search__style">
+        
+    </style>
+    <div class="document" id="document">
+        <div id="document-background" class="document__background">
+            <div class="close">
+                <i id="close" class="fas fa-times"></i>
+            </div>
+            <h2 class="document__title" id="document__title">
+            </h2>
+            <h4 class="document__author" id="document__author">
+            </h4>
+            <p class="document__content" id="document__content">
+            </p>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

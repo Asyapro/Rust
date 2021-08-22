@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./css/admin.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/72666c0e93.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header class="header">
+		<div class="header-content">
+			<div class="header-content__logo">
+				<a href="./main.html">Babylon</a>
+			</div>
+			<div class="header-content__account">
+				<div id="user_login" class="header-content__account-name"></div>
+				<div id="exit" class="header-content__account-exit">
+					Выход
+				</div>
+			</div>
+		</div>		
+	</header>
+	<main class="main">
+		<table id="users" class="users">
+				<tr>
+					<th>Имя</th>
+					<th>Роль</th>
+				</tr>
+			<tbody id="users__tbody">
+			</tbody>
+		</table>
+		<div class="add-user">
+			<i id = "add-user-button"class="fas fa-plus-circle fa-3x add-user__button"></i>
+		</div>
+		<div id="backgrnd"></div>
+		<div id="add-dialog" class="add-user-dialog">
+			<div class="close">
+				<i id="close" class="fas fa-times"></i>
+			</div>
+			<form class="dialog-form" id="create_form">
+				<div class="form-inputs">
+					<div class="form-inputs__input-div">
+						<label class="form-inputs__label" for="registration__login">Логин</label>
+						<input type="text" pattern="^[А-Яа-яЁёA-Za-z0-9]+$" class="form-inputs__input" id="registration__login">
+					</div>
+					<div class="form-inputs__input-div">
+						<label class="form-inputs__label" for="registartion__role">Роль</label>
+						<select class="form-inputs__dropdown form-inputs__input" id="registration__role">
+							<option value="teacher">Преподаватель</option>
+							<option value="user" selected>Студент</option>
+							<option value="admin">Администратор</option>						
+						</select>
+					</div>
+					<div class="form-inputs__input-div">
+						<label class="form-inputs__label" for="registration__password">Пароль</label>
+						<input type="text" class="form-inputs__input" id="registration__password">
+					</div>
+				</div>
+				<button id="add-btn" class="button">Добавить</button>
+			</form>
+		</div>
+	</main>
+	<script type="text/javascript" src="./js/admin.js"></script>
+</body>
+</html>

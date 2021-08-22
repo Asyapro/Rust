@@ -1,0 +1,136 @@
+body {
+  margin:0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main {
+  width: 1140px;
+  margin: auto;
+  padding:0 30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  padding:15px 0;
+  border-bottom: 1px solid black;
+}
+
+.header-content{
+  width: 1140px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-content__logo {
+  font-weight: 600;
+  font-size:35px;
+  line-height: 50px;
+}
+
+a {
+  text-decoration: none;
+  color:black;
+}
+
+.login-html{
+  margin: auto;
+  margin-top: 100px;
+  height: 400px;
+  width: 400px;
+  border: 1px solid black;
+}
+
+.login-form{
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.tab{
+  font-size:25px;
+  cursor: pointer;
+}
+
+.input{
+  height: 25px;
+  margin: auto;
+}
+
+.group__input{
+  margin-bottom: 15px;
+}
+
+.label{
+  color:black;
+  font-size:20px;
+  margin-bottom: 5px;
+}
+
+.sign-in-htm, .sign-up-htm{
+  text-align: center;
+}
+
+.button{
+  height: 40px;
+  margin: auto;
+  margin-top: 30px;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  font-size: 20px;
+  font-family: 'Montserrat',sans-serif;
+  cursor: pointer;
+}
+
+.button:hover{
+  background-color: white;
+  color: black;
+}
+
+.sign-in:checked + .tab,
+.sign-up:checked + .tab
+{
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+  
+  display:block;
+}
+
+.login-html .sign-in-htm,
+.login-html .sign-up-htm{
+  
+  position:absolute;
+  transform:rotateY(180deg);
+  backface-visibility:hidden;
+  transition:all .4s linear;
+}
+
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check{
+  display:none;
+}
+
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm
+{
+  transform:rotate(0);
+}
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm
+{
+  transform:rotate(0);
+}
+form{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
