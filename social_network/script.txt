@@ -1,0 +1,54 @@
+create or replace function make_friends (
+    user1 integer,
+    user2 integer) returns void
+    as $$
+    declare
+        user_friends INT[];
+    begin
+
+    user_friends = (select friends from users where id = user1);
+    if (user2 != ANY(user_friends)) then
+        user_friends = array_append(user_friends, user2);
+        update users set friends = user_friends where id = user1;
+    end if;
+
+    user_friends = (select friends from users where id = user2);
+    if (user1 != ANY(user_friends)) then
+        user_friends = array_append(user_friends, user1);
+        update users set friends = user_friends where id = user2;
+    end if;
+
+    return;
+    end;
+    $$ language plpgsql;
+
+
+create or replace function delete_friends (
+    user1 integer,
+    user2 integer) returns void
+    as $$
+    declare
+        user_friends INT[];
+    begin
+
+    user_friends = (select friends from users where id = user1);
+
+    if (user2 = ANY(user_friends)) then
+        user_friends = array_remove(user_friends, user2);
+        update users set friends = user_friends where id = user1;
+    end if;
+
+    user_friends = (select friends from users where id = user2);
+
+    if (user1 = ANY(user_friends)) then
+        user_friends = array_remove(user_friends, user1);
+        update users set friends = user_friends where id = user2;
+    end if;
+
+    return;
+    end;
+    $$ language plpgsql;
+
+select * from make_friends (2, 3);
+select * from delete_friends (2, 3);
+
